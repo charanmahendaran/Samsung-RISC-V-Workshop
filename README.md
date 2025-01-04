@@ -1,6 +1,7 @@
 # VSDSquadron Mini RISC-V Development Board 
 
 ## 1. Overview
+<p align="centre"> <img src="./Images/Vsd.png">
 
 * ### Core Processor:
     * Features the CH32V003F4U6 RISC-V chip with ```RV32EC``` instruction set.
@@ -14,8 +15,12 @@
     * Powered via USB-C connector.
 
 ## 2. Specifications
+
 * ### Form Factor: 
     * 50 x 28 mm with a maximum height of 8mm (top) and 1mm (bottom).
+  
+<p align="centre"> <img src="./Images/Vsd_Power_supply.png">
+   
 * ### Power:
    * Nominal Input: 5V.
    * I/O Voltage: 3.3V.
@@ -45,9 +50,18 @@ To program and test the board (e.g., a "blink" example):
    * Connect the board via USB-C.
    * Use ```PlatformIO``` in VSCode to ```build``` and ```upload``` the code.
    * Follow provided visuals and step-by-step instructions in the datasheet.
+ 
+   <p align="centre"> <img src="./Images/Step1.png">
+   <p align="centre"> <img src="./Images/Step2.png">
+   <p align="centre"> <img src="./Images/Step3.png">
+   <p align="centre"> <img src="./Images/Step4.png">
+   <p align="centre"> <img src="./Images/Step5.png">
 
 * ### 6. Completion
    *    Once installation is complete, the following window to be checked for correctness.
+
+<p align="centre"> <img src="./Images/Complete_1.png">
+<p align="centre"> <img src="./Images/Complete_2.png">
 
 ## 5. Handling and Usage
    * ESD Precautions: Handle with care to avoid static damage.
