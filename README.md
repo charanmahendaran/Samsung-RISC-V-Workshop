@@ -1,4 +1,5 @@
-# VSDSquadron Mini RISC-V Development Board 
+<details>
+<summary><h3> VSDSquadron Mini RISC-V Development Board </h3> </summary> 
 
 ## 1. Overview
 <p align="centre"> <img src="./Images/Vsd.png">
@@ -67,4 +68,4 @@ To program and test the board (e.g., a "blink" example):
    * ESD Precautions: Handle with care to avoid static damage.
    * Operating Temperature: Designed for room temperature, ```20-35°C```.
    * Powering Up: Use ```USB-C``` connection for power and programming.
-
+</details>
