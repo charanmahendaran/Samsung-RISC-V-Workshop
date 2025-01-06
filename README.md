@@ -78,6 +78,10 @@ To program and test the board (e.g., a "blink" example):
 <hr>
 
 <details>
-   <summary><b> Task 1 : </b>To install the RISC-V toolchain using the provided VDI link and create a Virtual Machine through Orcale VM Box.
-</summary>
+   <summary><b> Task 1 : </b>Install the RISC-V toolchain using the provided VDI link by setting up a Virtual Machine in Oracle VM VirtualBox. Convert C programs to RISC-V architecture seamlessly within this environment</summary>
+   
+### Creating a Simple Program for finding sum of n numbers:
+<p align="centre"> <img src="./Task 1/Sum_1_to_n_command.png">
+<p align="centre"> <img src="./Task 1/Sum_1_to_n_program.png">
+
 </details>
