@@ -57,11 +57,13 @@ To program and test the board (e.g., a "blink" example):
    * Use ```PlatformIO``` in VSCode to ```build``` and ```upload``` the code.
    * Follow provided visuals and step-by-step instructions in the datasheet.
  
-   <p align="centre"> <img src="./Images/Step1.png">
-   <p align="centre"> <img src="./Images/Step2.png">
-   <p align="centre"> <img src="./Images/Step3.png">
-   <p align="centre"> <img src="./Images/Step4.png">
-   <p align="centre"> <img src="./Images/Step5.png">
+   <p float="left">
+       <img src="./Images/Step1.png" width="400">
+       <img src="./Images/Step2.png" width="400">
+       <img src="./Images/Step3.png">
+       <img src="./Images/Step4.png">
+       <img src="./Images/Step5.png">
+   </p>  
 
 * #### Completion
    *   After completing the installation, verify its accuracy by ensuring the following window appears as expected.
