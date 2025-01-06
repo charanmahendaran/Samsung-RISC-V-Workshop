@@ -68,8 +68,8 @@ To program and test the board (e.g., a "blink" example):
 * #### Completion
    *   After completing the installation, verify its accuracy by ensuring the following window appears as expected.
 
-<p align="centre"> <img src="./Images/Complete_1.png">
-<p align="centre"> <img src="./Images/Complete_2.png">
+<p align="centre"> <img src="./Images/Complete_1.png" width="800">
+<p align="centre"> <img src="./Images/Complete_2.png" width="800">
 
 ### 5. Handling and Usage
    * ESD Precautions: Handle with care to avoid static damage.
