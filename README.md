@@ -87,9 +87,28 @@ To program and test the board (e.g., a "blink" example):
 
 <details>
    <summary><b> Task 1 : </b>Install the RISC-V toolchain using the provided VDI link by setting up a Virtual Machine in Oracle VM VirtualBox. Convert C programs to RISC-V architecture seamlessly within this environment</summary>
-   
-### Creating a Simple Program for finding sum of n numbers:
-<p align="centre"> <img src="./Task 1/Sum_1_to_n_command.png">
-<p align="centre"> <img src="./Task 1/Sum_1_to_n_program.png">
 
+### Installing RISC-V and Setting up VM in Oracle VM Box
+<p align="centre"> <img src="./Task 1/VM_Box.png">
+
+### Creating a Simple Program for finding sum of n numbers:
+<p float="left">
+      <img src="./Task 1/Sum_1_to_n_command.png" width="500">
+      <img src="./Task 1/Sum_1_to_n_program.png" width="500">
+</p>
+
+### Main function in RISCV64 Architecture
+<p align="centre"> <img src="./Task 1/main_function_riscv.png">
+
+### Running program in O1 Option in RISCV64
+<p float="left">
+   <img src="./Task 1/Sum1tonriscv_O1.png" width="500">
+   <img src="./Task 1/main_function_riscv_O1.png" width="500">
+</p>
+
+### Running program in Ofast Option in RISCV64
+<p float="left">
+   <img src="./Task 1/Sum1tonriscv_Ofast.png" width="500">
+   <img src="./Task 1/main_function_riscv_Ofast.png" width="500">
+</p>
 </details>
