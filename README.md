@@ -7,7 +7,7 @@
 <summary><b> VSDSquadron Mini RISC-V Development Board </b></summary> 
    
 ### 1. Overview
-<p align="centre"> <img src="./Images/Vsd.png">
+<p align="centre"> <img src="./Images/Vsd.png" width="800">
 
 * #### Core Processor:
     * Features the CH32V003F4U6 RISC-V chip with ```RV32EC``` instruction set.
@@ -25,7 +25,7 @@
 * #### Form Factor: 
     * 50 x 28 mm with a maximum height of 8mm (top) and 1mm (bottom).
   
-<p align="centre"> <img src="./Images/Vsd_Power_supply.png">
+<p align="centre"> <img src="./Images/Vsd_Power_supply.png" widh="800">
    
 * #### Power:
    * Nominal Input: 5V.
