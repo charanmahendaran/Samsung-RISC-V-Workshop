@@ -78,6 +78,15 @@ To program and test the board (e.g., a "blink" example):
 <hr>
 
 <details>
+   <summary><b> Lab Session 1 : </b>Understood the basics of RISC-V and Openlane</summary>
+   
+### Creating a Simple Program for finding sum of n numbers:
+<p align="centre"> <img src="./Task 1/Sum_1_to_n_command.png">
+
+</details>
+
+
+<details>
    <summary><b> Task 1 : </b>Install the RISC-V toolchain using the provided VDI link by setting up a Virtual Machine in Oracle VM VirtualBox. Convert C programs to RISC-V architecture seamlessly within this environment</summary>
    
 ### Creating a Simple Program for finding sum of n numbers:
