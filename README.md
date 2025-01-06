@@ -93,8 +93,8 @@ To program and test the board (e.g., a "blink" example):
 
 ### Creating a Simple Program for finding sum of n numbers:
 <p float="left">
-      <img src="./Task 1/Sum_1_to_n_command.png" width="500">
-      <img src="./Task 1/Sum_1_to_n_program.png" width="500">
+      <img src="./Task 1/Sum_1_to_n_command.png" width="800">
+      <img src="./Task 1/Sum_1_to_n_program.png" width="800">
 </p>
 
 ### Main function in RISCV64 Architecture
