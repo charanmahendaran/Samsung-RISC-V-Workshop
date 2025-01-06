@@ -98,7 +98,7 @@ To program and test the board (e.g., a "blink" example):
 </p>
 
 ### Main function in RISCV64 Architecture
-<p align="centre"> <img src="./Task 1/main_function_riscv.png">
+<p align="left"> <img src="./Task 1/main_function_riscv.png" width="800">
 
 ### Running program in O1 Option in RISCV64
 <p float="left">
