@@ -93,8 +93,8 @@ To program and test the board (e.g., a "blink" example):
 
 ### Creating a Simple Program for finding sum of n numbers:
 <p float="left">
-      <img src="./Task 1/Sum_1_to_n_command.png" width="800">
-      <img src="./Task 1/Sum_1_to_n_program.png" width="800">
+      <img src="./Task 1/Sum_1_to_n_command.png" width="400">
+      <img src="./Task 1/Sum_1_to_n_program.png" width="400">
 </p>
 
 ### Main function in RISCV64 Architecture
@@ -102,13 +102,13 @@ To program and test the board (e.g., a "blink" example):
 
 ### Running program in O1 Option in RISCV64
 <p float="left">
-   <img src="./Task 1/Sum1tonriscv_O1.png" width="800">
-   <img src="./Task 1/main_function_riscv_O1.png" width="800">
+   <img src="./Task 1/Sum1tonriscv_O1.png" width="400">
+   <img src="./Task 1/main_function_riscv_O1.png" width="400">
 </p>
 
 ### Running program in Ofast Option in RISCV64
 <p float="left">
-   <img src="./Task 1/Sum1tonriscv_Ofast.png" width="800">
-   <img src="./Task 1/main_function_riscv_Ofast.png" width="800">
+   <img src="./Task 1/Sum1tonriscv_Ofast.png" width="400">
+   <img src="./Task 1/main_function_riscv_Ofast.png" width="400">
 </p>
 </details>
