@@ -58,7 +58,7 @@ To program and test the board (e.g., a "blink" example):
    * Follow provided visuals and step-by-step instructions in the datasheet.
  
    <p float="centre">
-       <img src="./Images/Step1.png" width="550">
+       <img src="./Images/Step1.png" width="500">
        <img src="./Images/Step2.png" width="250" height="400">
        <img src="./Images/Step3.png" width="800">
        <img src="./Images/Step4.png">
