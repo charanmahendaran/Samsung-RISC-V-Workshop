@@ -110,7 +110,7 @@ To program and test the board (e.g., a "blink" example):
 
 ### Running program in Ofast Option in RISCV64
 <p float="left">
-   <img src="./Task 1/Sum1tonriscv_Ofast.png" width="400" height="400">
+   <img src="./Task 1/Sum1tonriscv_Ofast.png" width="400" height="200">
    <img src="./Task 1/main_function_riscv_Ofast.png" width="400">
 </p>
 </details>
