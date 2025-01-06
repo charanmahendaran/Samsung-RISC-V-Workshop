@@ -60,9 +60,9 @@ To program and test the board (e.g., a "blink" example):
    <p float="centre">
        <img src="./Images/Step1.png" width="525">
        <img src="./Images/Step2.png" width="250" height="375">
-       <img src="./Images/Step3.png" width="800">
-       <img src="./Images/Step4.png">
-       <img src="./Images/Step5.png">
+       <img src="./Images/Step3.png" width="775">
+       <img src="./Images/Step4.png" width="775">
+       <img src="./Images/Step5.png" width="775">
    </p>  
 
 * #### Completion
