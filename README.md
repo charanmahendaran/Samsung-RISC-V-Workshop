@@ -1,4 +1,4 @@
-# RISC-V Workshop
+# SAMSUNG RISC-V Workshop
 #### The RISC-V Workshop, certified by Samsung and VLSI System Design under the guidance of Kunal Ghosh, is a specialized training program designed to provide hands-on experience in System-on-Chip (SoC) design and embedded systems development using the RISC-V-based VSD Squadron Mini board, culminating in an industry-recognized certification.
 <hr>
 
