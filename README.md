@@ -3,9 +3,13 @@
 
 ## Basic Details
    <b>Name : </b>Charan Mahendaran
+   
    <b>Email ID : </b>charanmahendaran@gmail.com
+   
    <b>College : </b>The Global Academy Of Technology
+   
    <b>GitHub Profile : </b>charanmahendaran
+   
    <b>LinkedIN Profile : </b>charanmahendaran
 <hr>
 
