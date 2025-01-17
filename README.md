@@ -145,7 +145,7 @@ To program and test the board (e.g., a "blink" example):
 <hr>
 
 <details>
-   <summary><b> Task 3 : </b>qwertyuiopsdfghjklxcvbnm.</summary>
+   <summary><b> Task 3 : </b> Analyze RISC-V software documentation to decode 15 unique instructions from your application code, determine their 32-bit instruction codes and patterns, and classify them by instruction type.</summary>
    
 ## RISC-V Architecture: A Brief Overview
 RISC-V (Reduced Instruction Set Computer - V) is an open-standard instruction set architecture (ISA) that follows the principles of reduced instruction set computing. Unlike proprietary ISAs, RISC-V is free to use without licensing fees, making it a popular choice for academic research, education, and industry applications. This open nature promotes innovation across various sectors, from hardware development to software engineering.
