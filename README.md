@@ -141,3 +141,100 @@ To program and test the board (e.g., a "blink" example):
 <p align="left"> <img src="./Task 2/Mul1ton_Ofast_debug_spike.png" width="800">
 </p>
 </details>
+
+<hr>
+
+<details>
+   <summary><b> Task 3 : </b>qwertyuiopsdfghjklxcvbnm.</summary>
+   
+## RISC-V Architecture: A Brief Overview
+RISC-V (Reduced Instruction Set Computer - V) is an open-standard instruction set architecture (ISA) that follows the principles of reduced instruction set computing. Unlike proprietary ISAs, RISC-V is free to use without licensing fees, making it a popular choice for academic research, education, and industry applications. This open nature promotes innovation across various sectors, from hardware development to software engineering.
+
+### Why Understanding Instruction Formats Matters
+Understanding the structure of RISC-V instruction formats is vital for several reasons:
+
+- Instruction Decoding: Enables accurate execution of instructions.
+- Pipeline Design: Optimizes CPU pipeline stages for better performance.
+- Compiler Design: Aids in generating efficient machine code.
+- Debugging & Verification: Helps identify errors in hardware and software.
+- Extensibility: Crucial for adding custom instructions in RISC-V's modular architecture.
+- Instruction Types in RISC-V
+
+#### RISC-V instructions are categorized into the following types based on their field organization:
+
+#### 1. R-Type (Register-Register):
+   - Operations: Arithmetic and logical operations between registers.
+   - Example: ADD rd, rs1, rs2 (rd = rs1 + rs2)
+      
+#### 2. I-Type (Immediate):
+   - Operations: Arithmetic operations using a register and an immediate value.
+   - Example: ADDI rd, rs1, imm (rd = rs1 + imm)
+     
+#### 3. S-Type (Store):
+   - Operations: Storing data from a register to memory.
+   - Example: SW rs1, imm(rs2) (memory[rs2 + imm] = rs1)
+     
+#### 4. B-Type (Branch):
+   - Operations: Conditional branching based on register values.
+   - Example: BEQ rs1, rs2, offset (branch if rs1 == rs2)
+
+#### 5. U-Type (Upper Immediate):
+   - Operations: Instructions that use large immediate values.
+   - Example: LUI rd, imm (load upper immediate into rd)
+
+#### 6. J-Type (Jump):
+   - Operations: Unconditional jumps to a specified address.
+   - Example: JAL rd, imm (jump and link)
+
+### Key Fields in RISC-V Instructions
+Each instruction in RISC-V has several key fields that define its functionality:
+- Opcode: Specifies the operation type.
+- Function Fields (funct3, funct7): Define the specific operation within an instruction type.
+- Immediate Values: Represent constants used in computations.
+- Registers: Indicate source and destination registers for data operations.
+- Example: LUI (Load Upper Immediate)
+- For an instruction like:
+   * ```lui x5, 0x12345```
+   * Encoding: The immediate value ```0x12345``` is loaded into the upper 20 bits of register ```x5```.
+   * Execution: The instruction loads the value into the upper 20 bits of ```x5```, while the lower bits are set to zero.
+  
+## Instruction Categories
+### Arithmetic Instructions
+- ADD: Adds values in two registers.
+Example: ADD rd, rs1, rs2 (rd = rs1 + rs2)
+- ADDI: Adds a register and an immediate.
+Example: ADDI rd, rs1, imm (rd = rs1 + imm)
+
+### Logical Instructions
+- AND: Bitwise AND.
+Example: AND rd, rs1, rs2 (rd = rs1 & rs2)
+
+### OR: Bitwise OR.
+- Example: OR rd, rs1, rs2 (rd = rs1 | rs2)
+
+### Branch Instructions
+- BEQ: Branch if equal.
+Example: BEQ rs1, rs2, offset (branch if rs1 == rs2)
+- BNE: Branch if not equal.
+Example: BNE rs1, rs2, offset (branch if rs1 != rs2)
+
+### Load and Store Instructions
+- LW: Load a word from memory.
+Example: LW rd, offset(rs1) (rd = memory[rs1 + offset])
+- SW: Store a word to memory.
+Example: SW rs1, offset(rs2) (memory[rs2 + offset] = rs1)
+
+### Special Instructions
+- AUIPC: Add upper immediate to PC (Program Counter).
+Example: AUIPC rd, imm (rd = PC + imm << 12)
+
+
+## RISC-V Extensions
+RISC-V allows for optional extensions to provide additional functionality:
+- M: Integer multiplication and division.
+- A: Atomic operations.
+- F, D, Q: Floating-point operations (32-bit, 64-bit, 128-bit).
+- C: Compressed instructions.
+
+</p>
+</details>
