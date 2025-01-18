@@ -100,6 +100,8 @@ To program and test the board (e.g., a "blink" example):
 
 <details>
    <summary><b> Task 1 : </b>Install the RISC-V toolchain using the provided VDI link by setting up a Virtual Machine in Oracle VM VirtualBox. Convert C programs to RISC-V architecture seamlessly within this environment</summary>
+   
+- Installing leafpad editor using the command - ```sudo snap install leafpad``` or ```sudo apt install leafpad```
 
 ### Installing RISC-V and Setting up VM in Oracle VM Box:
 <p align="left"> <img src="./Task 1/VM_Box.png" width="800">
@@ -110,14 +112,20 @@ To program and test the board (e.g., a "blink" example):
       <img src="./Task 1/Sum_1_to_n_program.png" width="400">
 </p>
 
+- Creating a Simple program in leafpad editor using the command - ```leafpad sum1ton.c &```
+- Compiling the program using the command - ```gcc sum1ton.c```
 ### Main function in RISCV64 Architecture:
 <p align="left"> <img src="./Task 1/main_function_riscv.png" width="800">
+   
+- Compiling in RISCV Architecture using command - ```riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o mul1ton.o mul1ton.c ```
 
 ### Running program in O1 Option in RISCV64:
 <p float="left">
    <img src="./Task 1/Sum1tonriscv_O1.png" width="400">
    <img src="./Task 1/main_function_riscv_O1.png" width="400">
 </p>
+
+- Opening in RISCV using Object Dump in O1 Option - ```riscv64-unknown-elf-objdump -d mul1ton.o | less ```
 </details>
 
 <hr>
