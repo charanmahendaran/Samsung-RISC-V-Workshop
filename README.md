@@ -231,7 +231,7 @@ Example: AUIPC rd, imm (rd = PC + imm << 12)
 RISC-V allows for optional extensions to provide additional functionality:
 - M: Integer multiplication and division.
 - A: Atomic operations.
-- F, D, Q: Floating-point operations (32-bit, 64-bit, 128-bit).
+- F, D, Q: Floating-point operations (```32-bit```, ```64-bit```, ```128-bit```).
 - C: Compressed instructions.
   
 ## RISC-V Object Dump
@@ -250,7 +250,7 @@ RISC-V allows for optional extensions to provide additional functionality:
 - rd (a0 = x10): 01010
 - Opcode: 0110111
 
-Machine Code:0x02100037
+Machine Code: ```0x02100037```
 
 ```
 Final 32-bit Instruction Format:
@@ -258,7 +258,8 @@ Final 32-bit Instruction Format:
 | 0000000000100001 | 01010 | 0110111 |
 ```
 Final Binary Representation:
-0000000000100001010100110111011
+```0000000000100001010100110111011```
+____
 
 ### INSTRUCTION 2:
 <p align="left"> <img src="./Task 3/Instruction_2.png" width="800">
@@ -278,7 +279,7 @@ Final Binary Representation:
 - rd (sp = x2): 00010
 - Opcode: 0010011
 
-Machine Code: 0xfff30313
+Machine Code: ```0xfff30313```
 
 ```
 Final 32-bit Instruction Format:
@@ -286,7 +287,8 @@ Final 32-bit Instruction Format:
 | 111111110000   | 00010 | 000    | 00010 | 0010011 |
 ```
 Final Binary Representation:
-11111111000000010000000110010011
+```11111111000000010000000110010011```
+____
 
 ### INSTRUCTION 3:
 <p align="left"> <img src="./Task 3/Instruction_3.png" width="800">
@@ -307,7 +309,7 @@ The RISC-V pseudo-instruction li a2, 120 (load immediate) is translated into a r
 - rd (a2 = x12): 01100
 - Opcode: 0010011
 
-Machine Code: 0x07830313
+Machine Code: ```0x07830313```
 
 ```
 Final 32-bit Instruction Format:
@@ -315,7 +317,8 @@ Final 32-bit Instruction Format:
 | 000001111000   | 00000 | 000    | 01100 | 0010011 |
 ```
 Final Binary Representation:
-0000011110000000000001100010011
+```0000011110000000000001100010011```
+____
 
 ### INSTRUCTION 4:
 <p align="left"> <img src="./Task 3/Instruction_4.png" width="800">
@@ -336,7 +339,7 @@ The RISC-V pseudo-instruction li a1, 5 (load immediate) is translated into a rea
 - rd (a1 = x11): 01011
 - Opcode: 0010011
 
-Machine Code: 0x00030313
+Machine Code: ```0x00030313```
 
 ```
 Final 32-bit Instruction Format:
@@ -344,7 +347,8 @@ Final 32-bit Instruction Format:
 | 000000000101   | 00000 | 000    | 01011 | 0010011 |
 ```
 Final Binary Representation:
-00000000010100000000010110010011
+```00000000010100000000010110010011```
+____
 
 ### INSTRUCTION 5:
 <p align="left"> <img src="./Task 3/Instruction_5.png" width="800">
@@ -363,7 +367,7 @@ Final Binary Representation:
 - rd (a0 = x10): 01010
 - Opcode: 0010011
 
-Machine Code: 0x18030313
+Machine Code: ```0x18030313```
 
 ```
 Final 32-bit Instruction Format:
@@ -371,7 +375,8 @@ Final 32-bit Instruction Format:
 | 000011000000   | 01010 | 000    | 01010 | 0010011 |
 ```
 Final Binary Representation:
-00001100000001010000010100010011
+```00001100000001010000010100010011```
+____
 
 ### INSTRUCTION 6:
 <p align="left"> <img src="./Task 3/Instruction_6.png" width="800">
@@ -390,7 +395,7 @@ Final Binary Representation:
 - funct3: 011
 - Opcode: 0100011
 
-Machine Code: 0x00812123
+Machine Code: ```0x00812123```
 
 ```
 Final 32-bit Instruction Format:
@@ -398,8 +403,8 @@ Final 32-bit Instruction Format:
 | 0000000   | 00001 | 00010 | 011    | 01000    | 0100011 |
 ```
 Final Binary Representation:
-00000000100000010010001000100011
-
+```00000000100000010010001000100011```
+____
 
 ### INSTRUCTION 7:
 <p align="left"> <img src="./Task 3/Instruction_7.png" width="800">
@@ -414,7 +419,7 @@ Final Binary Representation:
 - rd (ra = x1): 00001
 - Opcode: 1101111
 
-Machine Code: 0x000520ff
+Machine Code: ```0x000520ff```
 
 ```
 Final 32-bit Instruction Format:
@@ -422,7 +427,8 @@ Final 32-bit Instruction Format:
 | 0       | 0000000000    | 1       | 01010001     | 00001 | 1101111 |
 ```
 Final Binary Representation:
-000000000000000010100001000010111101111
+```000000000000000010100001000010111101111```
+____
 
 ### INSTRUCTION 8:
 <p align="left"> <img src="./Task 3/Instruction_8.png" width="800">
@@ -441,7 +447,7 @@ Final Binary Representation:
 - rd (ra = x1): 00001
 - Opcode: 0000011
 
-Machine Code: 0x00830303
+Machine Code: ```0x00830303```
 
 ```
 Final 32-bit Instruction Format:
@@ -449,7 +455,8 @@ Final 32-bit Instruction Format:
 | 000000001000   | 00010 | 011    | 00001 | 0000011 |
 ```
 Final Binary Representation:
-0000000010000001000000110000011
+```0000000010000001000000110000011```
+____
 
 ### INSTRUCTION 9:
 <p align="left"> <img src="./Task 3/Instruction_9.png" width="800">
@@ -468,7 +475,7 @@ Final Binary Representation:
 - rd (a0 = x10): 01010
 - Opcode: 0010011
 
-Machine Code: 0x00030313
+Machine Code: ```0x00030313```
 
 ```
 Final 32-bit Instruction Format:
@@ -476,7 +483,8 @@ Final 32-bit Instruction Format:
 | 000000000000   | 00000 | 000    | 01010 | 0010011 |
 ```
 Final Binary Representation:
-00000000000000000000010110010011
+```00000000000000000000010110010011```
+____
 
 ### INSTRUCTION 10:
 <p align="left"> <img src="./Task 3/Instruction_10.png" width="800">
@@ -495,7 +503,7 @@ Final Binary Representation:
 - rd (sp = x2): 00010
 - Opcode: 0010011
 
-Machine Code: 0x01030313
+Machine Code: ```0x01030313```
 
 ```
 Final 32-bit Instruction Format:
@@ -503,7 +511,8 @@ Final 32-bit Instruction Format:
 | 000000001000   | 00010 | 000    | 00010 | 0010011 |
 ```
 Final Binary Representation:
-00000000100000010000000110010011
+```00000000100000010000000110010011```
+____
 
 ### INSTRUCTION 11:
 <p align="left"> <img src="./Task 3/Instruction_11.png" width="800">
@@ -518,7 +527,7 @@ Final Binary Representation:
 - rd (a5 = x15): 01111s
 - Opcode: 0010111
 
-Machine Code: 0xfffff073
+Machine Code: ```0xfffff073```
 
 ```
 Final 32-bit Instruction Format:
@@ -526,7 +535,8 @@ Final 32-bit Instruction Format:
 | 1111111111110000   | 01111 | 0010111 |
 ```
 Final Binary Representation:
-11111111111100000111100101110111
+```11111111111100000111100101110111```
+____
 
 ### INSTRUCTION 12:
 <p align="left"> <img src="./Task 3/Instruction_12.png" width="800">
@@ -543,7 +553,7 @@ Final Binary Representation:
 - funct3: 100
 - Opcode: 1100011
 
-Machine Code: 0x100f3133
+Machine Code: ```0x100f3133```
 
 ```
 Final 32-bit Instruction Format:
@@ -551,7 +561,8 @@ Final 32-bit Instruction Format:
 | 0       | 0001000000 | 01111 | 100    | 111101   | 0       | 1100011 |
 ```
 Final Binary Representation:
-00010000000111101111001000011011
+```00010000000111101111001000011011```
+____
 
 ### INSTRUCTION 13:
 <p align="left"> <img src="./Task 3/Instruction_13.png" width="800">
@@ -570,7 +581,7 @@ Final Binary Representation:
 - rd (a0 = x10): 01010
 - Opcode: 0010011
 
-Machine Code: 0x00012113
+Machine Code: ```0x00012113```
 
 ```
 Final 32-bit Instruction Format:
@@ -578,7 +589,8 @@ Final 32-bit Instruction Format:
 | 000000100010   | 01010 | 000    | 01010 | 0010011 |
 ```
 Final Binary Representation:
-00000010001001010000000110010011
+```00000010001001010000000110010011```
+____
 
 ### INSTRUCTION 14:
 <p align="left"> <img src="./Task 3/Instruction_14.png" width="800">
@@ -593,7 +605,7 @@ Final Binary Representation:
 - rd (x0 = x0): 00000
 - Opcode: 1101111
 
-Machine Code: 0x000501ff
+Machine Code: ```0x000501ff```
 
 ```
 Final 32-bit Instruction Format:
@@ -601,7 +613,8 @@ Final 32-bit Instruction Format:
 | 0       | 0000000000    | 1       | 00010000     | 00000 | 1101111 |
 ```
 Final Binary Representation:
-000000000000000010010000000011111101111
+```000000000000000010010000000011111101111```
+____
 
 ### INSTRUCTION 15:
 <p align="left"> <img src="./Task 3/Instruction_15.png" width="800">
@@ -620,7 +633,7 @@ Final Binary Representation:
 - rd (a0 = x10): 01010
 - Opcode: 0000011
 
-Machine Code: 0x00030283
+Machine Code: ```0x00030283```
 
 ```
 Final 32-bit Instruction Format:
@@ -628,6 +641,6 @@ Final 32-bit Instruction Format:
 | 000000000000   | 00010 | 010    | 01010 | 0000011 |
 ```
 Final Binary Representation:
-00000000000000010000100110000011
+```00000000000000010000100110000011```
 
 </details>
