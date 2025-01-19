@@ -8,9 +8,9 @@
    
    <b>College : </b>The Global Academy Of Technology
    
-   <b>GitHub Profile : </b>[charanmahendaran]([url](https://github.com/charanmahendaran))
+   <b>GitHub Profile : </b>[charanmahendaran](https://github.com/charanmahendaran)
    
-   <b>LinkedIN Profile : </b>[charanmahendaran]([url](https://www.linkedin.com/in/charanmahendaran/))
+   <b>LinkedIN Profile : </b>[charanmahendaran](https://www.linkedin.com/in/charanmahendaran/)
 <hr>
 
 
