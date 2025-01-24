@@ -652,3 +652,10 @@ Final Binary Representation:
 ```00000000000000010000100110000011```
 
 </details>
+
+<hr>
+
+<details>
+   <summary><b> Task 4 : </b> Simulate the design using the testbench, verify functional correctness by observing output signals, and save waveform snapshots for executed commands.</summary>
+   
+</details>
