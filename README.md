@@ -658,4 +658,37 @@ Final Binary Representation:
 <details>
    <summary><b> Task 4 : </b> Simulate the design using the testbench, verify functional correctness by observing output signals, and save waveform snapshots for executed commands.</summary>
    
+   ## Terminal Command:
+   <p align="centre"> <img src="./Task 4/Terminal.png" width="800">
+   
+   ## Instruction 1:
+   <p align="centre"> <img src="./Task 4/Ins_1_ADD.png" width="800">
+
+   ## Instruction 2:
+   <p align="centre"> <img src="./Task 4/Ins_2_SUB.png" width="800">
+
+   ## Instruction 3:
+   <p align="centre"> <img src="./Task 4/Ins_3_AND.png" width="800">
+
+   ## Instruction 4:
+   <p align="centre"> <img src="./Task 4/Ins_4_OR.png" width="800">
+
+   ## Instruction 5:
+   <p align="centre"> <img src="./Task 4/Ins_5_XOR.png" width="800">
+
+   ## Instruction 6:
+   <p align="centre"> <img src="./Task 4/Ins_6_SLT.png" width="800">
+
+   ## Instruction 7:
+   <p align="centre"> <img src="./Task 4/Ins_7_ADDI.png" width="800">
+
+   ## Instruction 8:
+   <p align="centre"> <img src="./Task 4/Ins_8_BEQ.png" width="800">
+
+   ## Instruction 9:
+   <p align="centre"> <img src="./Task 4/Ins_9_BNE.png" width="800">
+
+   ## Instruction 10:
+   <p align="centre"> <img src="./Task 4/Ins_10_SLL.png" width="800">
+   
 </details>
