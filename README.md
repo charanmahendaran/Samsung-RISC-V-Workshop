@@ -692,3 +692,282 @@ Final Binary Representation:
    <p align="centre"> <img src="./Task 4/Ins_10_SLL.png" width="800">
    
 </details>
+
+<hr>
+
+<details>
+   <summary><b> Task 5 : </b> Documentation of the project.</summary>
+
+   ## COMBINATION LOCK SYSTEM USING VSDSQM BOARD & SOLENOID LOCK
+   #### This project implements a combination lock system using the VSDSQM board (CH32V003F4U6), three push buttons, a TIP122 transistor, and a 12V solenoid lock. The system unlocks only when the correct sequence of button presses is entered.
+
+   ## Project Overview :
+- Microcontroller: VSDSQM (RISC-V based CH32V003F4U6).
+- Input: 3 push buttons (PA1, PA2, PC4).
+- Output: TIP122 transistor (switches solenoid lock).
+- Actuator: 12V solenoid lock (used for locking/unlocking).
+- Power: VSDSQM runs on 5V, solenoid lock runs on 12V.
+
+When the correct sequence of button presses is entered, the microcontroller activates the solenoid lock for 5 seconds using a TIP122 transistor.
+
+## How It Works :
+- The system starts in a locked state.
+- The user presses the buttons in a specific order.
+- If the sequence is correct, the solenoid lock is powered ON, unlocking the door.
+- After 5 seconds, the solenoid turns OFF, locking the door again.
+- If the wrong sequence is entered, the system resets and the user must start over.
+
+## Components Required :
+
+
+## System Architecture :
+The project consists of the following key components:
+
+<b> 1. Microcontroller: VSDSQM (CH32V003F4U6) </b>
+- Acts as the brain of the system.
+- Reads button presses and checks if they match the correct sequence.
+- Controls the solenoid lock via a TIP122 transistor.
+
+<b> 2. Push Buttons (User Input) </b>
+- Three buttons are connected to PA1, PA2, and PC4.
+- The buttons use pull-up resistors so that they read HIGH (1) when not pressed and LOW (0) when pressed.
+- The sequence logic ensures the lock opens only when the buttons are pressed in the correct order.
+
+<b> 3. TIP122 Transistor (Switching) </b>
+- A TIP122 transistor is used to control the solenoid lock.
+- The microcontroller works at 3.3V and cannot directly control a 12V solenoid.
+- The transistor acts as a switch that turns the solenoid on or off based on the microcontroller’s output.
+
+<b> 4. 12V Solenoid Lock (Actuator) </b>
+- When powered, the solenoid unlocks.
+- When power is cut off, the solenoid locks again.
+- The TIP122 transistor controls the power going to the solenoid.
+
+<b> 5. Power Supply </b>
+- The VSDSQM board runs on 5V (USB Type-C).
+- The solenoid lock requires 12V, so a separate 12V power source is used.
+- A common ground is shared between the 12V and 5V circuits to ensure proper operation.
+
+## Block Diagram :
+
+## Circuit Diagram :
+
+## Hardware Connections :
+### 1. Push Button Connections
+
+Each button has two terminals:
+- One terminal is connected to a VSDSQM GPIO pin.
+- The other terminal is connected to GND.
+  
+| Button	| VSDSQM Pin | Other Side  |
+| --- | --- | --- |
+|Button 1 |	PA1 | GND |
+|Button 2 |	PA2 | GND |
+|Button 3 |	PC4 | GND |
+
+- The microcontroller's internal pull-up resistors keep the pins HIGH.
+- When a button is pressed, the corresponding pin reads LOW (0).
+
+### 2. TIP122 Transistor (Switch for Solenoid Lock)
+- The TIP122 acts as a switch.
+- When PD6 is HIGH, the transistor turns ON, allowing 12V to reach the solenoid.
+- When PD6 is LOW, the solenoid turns OFF.
+
+| TIP122 Pin |	Connected To |
+| --- | --- |
+| Base (B) |	PD6 (via 1KΩ resistor) |
+| Collector (C) |	Solenoid Lock (-) |
+| Emitter (E) |	GND |
+
+### 3. Solenoid Lock
+| Solenoid Pin |	Connected To |
+| --- | --- |
+| Positive (+) |	12V Power Supply (+) |
+| Negative (-) |	TIP122 Collector |
+
+</details>
+
+<hr>
+
+<details>
+   <summary><b> Task 6 : </b> Application demo.</summary>
+   
+   ## Code :
+   
+   ```c
+#include "ch32v003fun.h"
+#include "ch32v003_GPIO.h"
+#include "ch32v003_delay.h"
+
+// Define GPIO pins
+#define BUTTON_1 GPIO_Pin_1  // PA1
+#define BUTTON_2 GPIO_Pin_2  // PA2
+#define BUTTON_3 GPIO_Pin_4  // PC4
+#define SOLENOID_PIN GPIO_Pin_6  // PD6 (Controls TIP122)
+
+// Correct sequence of button presses
+int sequence[] = {1, 2, 3};
+int current_position = 0;  // Tracks progress in the combination
+
+// Function to read which button is pressed
+int read_button() {
+    if (GPIO_ReadInputDataBit(GPIOA, BUTTON_1) == 0) return 1;
+    if (GPIO_ReadInputDataBit(GPIOA, BUTTON_2) == 0) return 2;
+    if (GPIO_ReadInputDataBit(GPIOC, BUTTON_3) == 0) return 3;
+    return 0;  // No button pressed
+}
+
+// Function to check the button sequence
+void check_sequence(int pressed_button) {
+    if (pressed_button == sequence[current_position]) {
+        current_position++;  // Move to the next step in sequence
+        if (current_position == 3) {  // If all three are correct
+            unlock_solenoid();
+            current_position = 0;  // Reset sequence
+        }
+    } else {
+        current_position = 0;  // Reset if incorrect button is pressed
+    }
+}
+
+// Function to unlock the solenoid lock
+void unlock_solenoid() {
+    GPIO_SetBits(GPIOD, SOLENOID_PIN);  // Turn on solenoid
+    delay_ms(5000);  // Keep unlocked for 5 seconds
+    GPIO_ResetBits(GPIOD, SOLENOID_PIN);  // Lock again
+}
+
+// Main function
+int main() {
+    SystemInit();
+
+    // Configure GPIO Pins
+    GPIO_InitTypeDef GPIO_InitStructure;
+
+    // Configure buttons as input (PA1, PA2, PC4)
+    GPIO_InitStructure.GPIO_Pin = BUTTON_1 | BUTTON_2;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;  // Input with pull-up resistor
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = BUTTON_3;
+    GPIO_Init(GPIOC, &GPIO_InitStructure);
+
+    // Configure solenoid control pin as output (PD6)
+    GPIO_InitStructure.GPIO_Pin = SOLENOID_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;  // Output push-pull
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+    
+    GPIO_ResetBits(GPIOD, SOLENOID_PIN);  // Ensure solenoid is OFF initially
+
+    while (1) {
+        int pressed_button = read_button();  // Read button press
+        if (pressed_button > 0) {
+            check_sequence(pressed_button);  // Process the sequence
+            delay_ms(300);  // Debounce delay
+        }
+    }
+}
+```
+
+### Explanation of the Code :
+<b> 1. GPIO Pin Setup </b>
+- Buttons (PA1, PA2, PC4) are set as input with pull-up resistors.
+- Solenoid Control Pin (PD6) is set as output (push-pull).
+
+<b> 2. Reading Button Presses </b>
+- The function read_button() checks if any button is pressed.
+- If pressed, it returns 1, 2, or 3 (corresponding to the button).
+
+<b> 3. Checking the Correct Sequence </b>
+- The function check_sequence() keeps track of the sequence of button presses.
+- If the correct order is followed:
+   - The function unlock_solenoid() is called.
+   - The solenoid unlocks for 5 seconds.
+- If the wrong button is pressed, the sequence resets to 0.
+
+<b> 4. Unlocking the Solenoid </b>
+- The function unlock_solenoid() sets PD6 HIGH to turn ON the solenoid via TIP122.
+- After 5 seconds, it turns OFF the solenoid.
+
+### System Behavior :
+
+| Scenario | System Response |
+| :--- | :--- |
+| Presses Button 1 (PA1) |	Moves to step 1 |
+| Presses Button 2 (PA2) | After PA1	Moves to step 2 |
+| Presses Button 3 (PC4) | After PA2	Unlocks solenoid for 5 seconds |
+| Presses wrong button |	Resets sequence to 0 |
+| No button pressed |	System waits for input |
+
+### How to Upload the Code Using VS Code & PlatformIO
+
+<b> Step 1: Install PlatformIO in VS Code </b>
+- Open VS Code.
+- Install PlatformIO extension from the marketplace.
+- Restart VS Code.
+
+<b> Step 2: Create a New PlatformIO Project </b>
+- Click on PlatformIO Home > New Project.
+- Select:
+- Board: Generic CH32V003
+- Framework: Baremetal (or use a template)
+- Click Create.
+
+<b> Step 3: Copy & Paste the Code </b>
+- Open src/main.cpp and replace with the above code.
+- Save the file.
+
+<b> Step 4: Upload the Code </b>
+- Connect the VSDSQM board to your PC via USB-C.
+- Click Upload in PlatformIO.
+- Wait for the flashing process to complete.
+
+## Demonstration :
+
+## Conclusion :
+
+This project implements a secure electronic combination lock system using the VSDSQM (CH32V003F4U6) microcontroller, three push buttons, a TIP122 transistor, and a 12V solenoid lock. The lock mechanism operates based on a predefined button sequence, ensuring enhanced security. If the correct three-button sequence is entered, the solenoid unlocks for 5 seconds before automatically locking again.
+
+### Key Achievements
+
+✅ Microcontroller-Based Lock System → Uses the VSDSQM board for precise control.  
+✅ High-Security Combination Lock → Requires a specific button sequence, not just a single input.  
+✅ Efficient Solenoid Control → Uses a TIP122 transistor to safely handle the high-power solenoid.  
+✅ No Extra Components Like Relays → Eliminates bulky relays, reducing cost & complexity.  
+✅ Auto-Locking Mechanism → Lock re-engages automatically after 5 seconds.  
+✅ Incorrect Attempt Handling → Any incorrect button press resets the sequence, improving security.  
+✅ Low Power Consumption → Only consumes power when unlocking, making it energy efficient.  
+
+### Why This Design?
+<b> 1. Secure and Reliable: </b> 
+
+      Unlike simple push-button locks, this design ensures only the correct sequence unlocks the system.
+      Wrong input resets the sequence, making brute-force unlocking nearly impossible.  
+      
+<b> 2.Cost-Effective & Minimal Components:
+
+      Uses a TIP122 transistor instead of a relay module, reducing size and cost.
+      No need for external resistors as the VSDSQM board provides internal pull-ups.  
+      
+<b> 3.Efficient Power Management:
+
+      Solenoid is activated only when unlocking, reducing unnecessary power usage.
+      Microcontroller operates at 3.3V, ensuring low energy consumption.   
+      
+<b> 4. Easy to Customize & Expand:
+
+      Can be easily modified for 4 or more buttons for increased security.
+      Supports integration with RFID, keypads, or fingerprint sensors.
+
+### Future Improvements & Enhancements
+ 1. Add a Buzzer for Feedback → Audible feedback for correct and incorrect attempts.
+ 2. OLED Display for Input Status → Show progress of sequence entry.
+ 3. Multiple User Codes → Store and verify different user codes in EEPROM.
+ 4. Wi-Fi/Bluetooth Unlocking → Enable remote unlocking via a smartphone app.
+ 5. Battery Backup → Ensure functionality during power failures.
+ 6. Tamper Detection → Trigger an alarm if excessive wrong attempts are made.
+
+### Final Thoughts
+This project provides a simple yet highly secure locking mechanism using a minimalist hardware approach. It is cost-effective, reliable, and expandable, making it a great starting point for advanced access control systems.
+
+</details>
