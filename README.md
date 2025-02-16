@@ -719,6 +719,16 @@ When the correct sequence of button presses is entered, the microcontroller acti
 
 ## Components Required :
 
+| Component	| Quantity | Use in the Project |
+| --- | --- | --- |
+| VSDSQM Board (CH32V003F4U6) |	1 |	Microcontroller to handle input processing and solenoid control. |
+| Push Buttons (2-pin) |	3 |	Used for user input to enter the correct unlock sequence. |
+| TIP122 Transistor (NPN Darlington) |	1 |	Acts as a switch to control the high-power solenoid lock using a low-power microcontroller signal. |
+| 12V Solenoid Lock |	1 |	The locking mechanism that engages/disengages based on the correct sequence. |
+| Diode (1N4007 or 1N5819 Schottky) |	1 |	Protects the circuit from voltage spikes when the solenoid turns off. |
+| 12V Power Supply (Adapter or Battery Pack) |	1 |	Provides power to the solenoid lock and transistor circuit. |
+| Jumper Wires (Male-Male, Male-Female) |	As needed |	Used for making connections between the components and the microcontroller. |
+| Breadboard or PCB | 1 |	Helps in assembling and testing the circuit before soldering permanently. |
 
 ## System Architecture :
 The project consists of the following key components:
