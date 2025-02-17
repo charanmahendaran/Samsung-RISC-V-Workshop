@@ -657,28 +657,61 @@ Final Binary Representation:
 
 <details>
    <summary><b> Task 4 : </b> Simulate the design using the testbench, verify functional correctness by observing output signals, and save waveform snapshots for executed commands.</summary>
+
+## Steps to Perform Functional Simulation of RISC-V
+
+### 1. Set Up the Working Directory
+
+Open a terminal and create a new directory, then navigate into it:
+```mkdir <your_name> && cd <your_name>```
+   
+### 2. Create and Edit Verilog Files
+
+Use a text editor (e.g., nano, vim, or code for VS Code) to create and edit the required files:
+
+- Using Nano:
+   ``` nano charan_rv32i.v ```
+   Paste the Verilog source code, then save and exit (Ctrl + X, then Y, then Enter).
+
+- Using VS Code:
+   ``` code charan_rv32i.v ```
+   Paste the Verilog source code and save the file (Ctrl + S).
+
+- Repeat the same steps for maazm_rv32i_tb.v:
+   ```nano charan_rv32i_tb.v``` or ```code charan_rv32i_tb.v```
+  
+### 3. Compile and Simulate the Verilog Code
+   Use Icarus Verilog (iverilog) to compile and execute the simulation:
+   ``` iverilog -o CM charan_rv32i.v charan_rv32i_tb.v ```  and
+   ```./CM```
+   
+### 4. View the Simulation Waveform in GTKWave
+To visualize the waveform output, run:
+```gtkwave charanm_rv32i.vcd```
+GTKWave will launch and display the simulation results.
    
    ## Terminal Command:
    <p align="centre"> <img src="./Task 4/Terminal.png" width="800">
 
 ## Instruction Memory Contents
 
-Address	Instruction Code	Assembly Instruction	Description
-MEM[0]	32'h02208300	add r6, r1, r2	Adds r1 and r2, stores the result in r6.
-MEM[1]	32'h02209380	sub r7, r1, r2	Subtracts r2 from r1, stores the result in r7.
-MEM[2]	32'h0230a400	and r8, r1, r3	Performs bitwise AND between r1 and r3, stores the result in r8.
-MEM[3]	32'h02513480	or r9, r2, r5	Performs bitwise OR between r2 and r5, stores the result in r9.
-MEM[4]	32'h0240c500	xor r10, r1, r4	Performs bitwise XOR between r1 and r4, stores the result in r10.
-MEM[5]	32'h02415580	slt r11, r2, r4	Sets r11 to 1 if r2 < r4, else sets it to 0.
-MEM[6]	32'h00520600	addi r12, r4, 5	Adds immediate value 5 to r4, stores the result in r12.
-MEM[7]	32'h00209181	sw r3, r1, 2	Stores the value of r3 at memory address (r1 + 2).
-MEM[8]	32'h00208681	lw r13, r1, 2	Loads a word from memory address (r1 + 2) into r13.
-MEM[9]	32'h00f00002	beq r0, r0, 15	Branches to PC + 15 if r0 == r0 (always true, acting as a jump).
-MEM[10]	32'h00210700	add r14, r2, r2	Adds r2 to itself, stores the result in r14 (doubles the value).
-MEM[11]	32'h01409002	bne r0, r1, 20	Branches to PC + 20 if r0 ≠ r1.
-MEM[12]	32'h00520601	addi r12, r4, 5	Adds immediate value 5 to r4, stores the result in r12.
-MEM[13]	32'h00208783	sll r1, r1, r2 (2)	Shifts r1 left by the value in r2 (shift amount is 2).
-MEM[14]	32'h00271803	srl r16, r14, r2 (2)	Shifts r14 right logically by the value in r2 (shift amount is 2), stores the result in r16.
+| Address |	Instruction Code |	Assembly Instruction |	Description |
+| :----: | :----: | :----: | :---- |
+| MEM[0] |	32'h02208300 |	add r6, r1, r2 |	Adds r1 and r2, stores the result in r6. |
+| MEM[1]	| 32'h02209380 |	sub r7, r1, r2 |	Subtracts r2 from r1, stores the result in r7. |
+| MEM[2] |	32'h0230a400 |	and r8, r1, r3 |	Performs bitwise AND between r1 and r3, stores the result in r8. |
+| MEM[3] |	32'h02513480 |	or r9, r2, r5 |	Performs bitwise OR between r2 and r5, stores the result in r9. |
+| MEM[4] |	32'h0240c500 |	xor r10, r1, r4 |	Performs bitwise XOR between r1 and r4, stores the result in r10. |
+| MEM[5] |	32'h02415580 |	slt r11, r2, r4 |	Sets r11 to 1 if r2 < r4, else sets it to 0. |
+| MEM[6] |	32'h00520600 |	addi r12, r4, 5 |	Adds immediate value 5 to r4, stores the result in r12. |
+| MEM[7] |	32'h00209181 |	sw r3, r1, 2 |	Stores the value of r3 at memory address (r1 + 2). |
+| MEM[8] |	32'h00208681 |	lw r13, r1, 2 |	Loads a word from memory address (r1 + 2) into r13. |
+| MEM[9] |	32'h00f00002 |	beq r0, r0, 15 |	Branches to PC + 15 if r0 == r0 (always true, acting as a jump). |
+| MEM[10] |	32'h00210700 |	add r14, r2, r2 |	Adds r2 to itself, stores the result in r14 (doubles the value). |
+| MEM[11] |	32'h01409002 |	bne r0, r1, 20 | Branches to PC + 20 if r0 ≠ r1. |
+| MEM[12] |	32'h00520601 |	addi r12, r4, 5 |	Adds immediate value 5 to r4, stores the result in r12. |
+| MEM[13] |	32'h00208783 |	sll r1, r1, r2 (2) |	Shifts r1 left by the value in r2 (shift amount is 2). |
+| MEM[14] |	32'h00271803 |	srl r16, r14, r2 (2) |	Shifts r14 right logically by the value in r2 (shift amount is 2), stores the result in r16. |
 
 
 ### Differences between standard RISCV ISA and the Instruction Set given in the reference repository:
@@ -697,6 +730,8 @@ MEM[14]	32'h00271803	srl r16, r14, r2 (2)	Shifts r14 right logically by the valu
 | LW R13, R1, 2 |	32'h0020a683 | 	32'h00208681 |
 | SRL R16, R14, R2 |	32'h0030a123 |	32'h00271803 |
 | SLL R15, R1, R2 |	32'h002097b3 |	32'h00208783 |
+
+<p align="centre"> <img src="./Task 4/Ins_Verify.png" width="800">
    
    ## Instruction 1: ```ADD R6, R2, R1```
    <p align="centre"> <img src="./Task 4/Ins_1_ADD.png" width="800">
