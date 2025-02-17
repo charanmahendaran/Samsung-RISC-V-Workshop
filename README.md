@@ -106,9 +106,41 @@ To program and test the board (e.g., a "blink" example):
 <hr>
 
 <details>
-   <summary><b> Lab Session : </b>Understood the basics of RISC-V and Openlane</summary>
+   <summary><b> Lab Session : </b>Understood the basics of RISC-V and Implementation</summary>
    
+## Openlane :
+
 <p align="centre"> <img src="./Lab Session/Lab Session 1/Openlane.png" width="800">
+
+## Synthesis :
+   
+<p align="centre"> <img src="./Lab Session/Lab Session 2/Synthesis.png" width="800">
+
+## Floorplanning :
+
+<p align="centre"> <img src="./Lab Session/Lab Session 2/Floorplanning.png" width="800">
+
+## Designing empty layout :
+   
+<p align="centre"> <img src="./Lab Session/Lab Session 2/Empty_gate_design.png" width="800">
+
+## Assigning layout :
+
+<p align="centre"> <img src="./Lab Session/Lab Session 2/Assigning_layout.png" width="800">
+
+## Routing process :
+
+<p align="centre"> <img src="./Lab Session/Lab Session 2/Routing.png" width="800">
+
+<p align="centre"> <img src="./Lab Session/Lab Session 2/Completed_routing.png" width="800">
+
+## Sample blinking program :
+
+<p align="centre"> <img src="./Lab Session/Lab Session 2/Sample_blinking_program.png" width="800">
+
+## Blinking program demo :
+
+   
 </details>
 
 <hr>
