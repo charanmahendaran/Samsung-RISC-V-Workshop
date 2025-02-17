@@ -731,7 +731,6 @@ GTKWave will launch and display the simulation results.
 | SRL R16, R14, R2 |	32'h0030a123 |	32'h00271803 |
 | SLL R15, R1, R2 |	32'h002097b3 |	32'h00208783 |
 
-<p align="centre"> <img src="./Task 4/Ins_Verify.png" width="800">
    
    ## Instruction 1: ```ADD R6, R2, R1```
    <p align="centre"> <img src="./Task 4/Ins_1_ADD.png" width="800">
