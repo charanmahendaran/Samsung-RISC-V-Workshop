@@ -848,6 +848,8 @@ The project consists of the following key components:
 
 ## Block Diagram :
 
+<p align="centre"> <img src="./Task 5/Block_diagram.png" width="300">
+
 ## Circuit Diagram :
 
 ## Hardware Connections :
