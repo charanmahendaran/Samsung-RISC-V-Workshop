@@ -708,10 +708,12 @@ GTKWave will launch and display the simulation results.
 | MEM[8] |	32'h00208681 |	lw r13, r1, 2 |	Loads a word from memory address (r1 + 2) into r13. |
 | MEM[9] |	32'h00f00002 |	beq r0, r0, 15 |	Branches to PC + 15 if r0 == r0 (always true, acting as a jump). |
 | MEM[10] |	32'h00210700 |	add r14, r2, r2 |	Adds r2 to itself, stores the result in r14 (doubles the value). |
-| MEM[11] |	32'h01409002 |	bne r0, r1, 20 | Branches to PC + 20 if r0 ≠ r1. |
-| MEM[12] |	32'h00520601 |	addi r12, r4, 5 |	Adds immediate value 5 to r4, stores the result in r12. |
-| MEM[13] |	32'h00208783 |	sll r1, r1, r2 (2) |	Shifts r1 left by the value in r2 (shift amount is 2). |
-| MEM[14] |	32'h00271803 |	srl r16, r14, r2 (2) |	Shifts r14 right logically by the value in r2 (shift amount is 2), stores the result in r16. |
+| MEM[11] |	~~32'h01409002~~ |	bne r0, r1, 20 | Branches to PC + 20 if r0 ≠ r1. |
+| MEM[12] |	~~32'h00520601~~ |	addi r12, r4, 5 |	Adds immediate value 5 to r4, stores the result in r12. |
+| MEM[13] |	~~32'h00208783~~ |	sll r1, r1, r2 (2) |	Shifts r1 left by the value in r2 (shift amount is 2). |
+| MEM[14] |	~~32'h00271803~~ |	srl r16, r14, r2 (2) |	Shifts r14 right logically by the value in r2 (shift amount is 2), stores the result in r16. |
+
+> Strikethrough indicates the commented out parts of the code.
 
 
 ### Differences between standard RISCV ISA and the Instruction Set given in the reference repository:
