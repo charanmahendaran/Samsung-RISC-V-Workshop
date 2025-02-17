@@ -852,6 +852,10 @@ The project consists of the following key components:
 
 ## Circuit Diagram :
 
+<p align="centre"> <img src="./Task 5/Circuit_dia1.jpeg" width="800">
+   
+<p align="centre"> <img src="./Task 5/Circuit_dia2.jpeg" width="800">
+
 ## Hardware Connections :
 ### 1. Push Button Connections
 
