@@ -106,7 +106,7 @@ To program and test the board (e.g., a "blink" example):
 <hr>
 
 <details>
-   <summary><b> Lab Session 1 : </b>Understood the basics of RISC-V and Openlane</summary>
+   <summary><b> Lab Session : </b>Understood the basics of RISC-V and Openlane</summary>
    
 <p align="centre"> <img src="./Lab Session/Lab Session 1/Openlane.png" width="800">
 </details>
