@@ -1,5 +1,20 @@
 # SAMSUNG RISC-V Workshop
-#### The RISC-V Workshop, certified by Samsung and VLSI System Design under the guidance of Kunal Ghosh, is a specialized training program designed to provide hands-on experience in System-on-Chip (SoC) design and embedded systems development using the RISC-V-based VSD Squadron Mini board, culminating in an industry-recognized certification.
+#### The RISC-V Workshop, certified by Samsung and VLSI System Design under the guidance of Kunal Ghosh, is a specialized training program designed to provide hands-on experience in System-on-Chip (SoC) design and embedded systems development using the RISC-V-based VSD Squadron Mini board, culminating in an industry-recognized certification.The Global Academy of Technology, Electronics and Communication Engineering Department, in collaboration with VLSI System Design (VSD) and the Tech Connect Club, is hosting an advanced RISC-V workshop as part of the Digital India RISC-V Mission 2025, supported by Samsung Semiconductor India Research (SSIR).
+
+## Workshop Overview
+<b>Date:</b> 6th & 7th January  
+<b>Venue:</b> Global Academy of Technology, Rajarajeshwari Nagar, Bengaluru - 560098.  
+
+This intensive training program is designed to provide hands-on experience in RISC-V-based SoC design and embedded systems development, equipping participants with industry-relevant skills in open-source hardware and software tools.
+
+## Key Learning Modules
+✅ Application to Machine Code: Understand how RISC-V streamlines application execution at the machine level.  
+✅ RISC-V Verilog to GDS: Learn to convert RISC-V RTL into silicon-ready layouts using open-source EDA tools.  
+✅ Hands-on with VSD Squadron Board: Develop, test, and program real-world applications on the VSD Squadron Mini RISC-V development board.  
+
+## Expert Instructor
+<b>Kunal Ghosh </b> – Founder, VLSI System Design (VSD).  
+IIT Alumnus with 15+ years of expertise in VLSI design and semiconductor technology.
 
 ## Basic Details
    <b>Name : </b>Charan Mahendaran
