@@ -1022,6 +1022,10 @@ int main() {
 
 ## Demonstration :
 
+[![Watch the video]
+(https://raw.githubusercontent.com/charanmahendaran/Samsung-RISC-V-Workshop/main/Images/thumbnail.png)
+(https://raw.githubusercontent.com/charanmahendaran/Samsung-RISC-V-Workshop/main/Images/Demonstration_Vid.mp4)]
+
 ## Conclusion :
 
 This project implements a secure electronic combination lock system using the VSDSQM (CH32V003F4U6) microcontroller, three push buttons, a TIP122 transistor, and a 12V solenoid lock. The lock mechanism operates based on a predefined button sequence, ensuring enhanced security. If the correct three-button sequence is entered, the solenoid unlocks for 5 seconds before automatically locking again.
