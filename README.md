@@ -139,6 +139,11 @@ To program and test the board (e.g., a "blink" example):
 <p align="centre"> <img src="./Lab Session/Lab Session 2/Sample_blinking_program.png" width="800">
 
 ## Blinking program demo :
+   
+   Video link:
+   
+https://github.com/user-attachments/assets/c97c4149-f440-46e2-8e24-2860f95c2d30
+
 
    
 </details>
