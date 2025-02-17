@@ -1022,9 +1022,7 @@ int main() {
 
 ## Demonstration :
 
-[![Watch the video]
-(https://raw.githubusercontent.com/charanmahendaran/Samsung-RISC-V-Workshop/main/Images/thumbnail.png)
-(https://raw.githubusercontent.com/charanmahendaran/Samsung-RISC-V-Workshop/main/Images/Demonstration_Vid.mp4)]
+https://github.com/user-attachments/assets/01e8be5c-31c7-4dd1-b290-8af16aff041b
 
 ## Conclusion :
 
