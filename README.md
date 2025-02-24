@@ -8,9 +8,9 @@
 This intensive training program is designed to provide hands-on experience in RISC-V-based SoC design and embedded systems development, equipping participants with industry-relevant skills in open-source hardware and software tools.
 
 ## Key Learning Modules
-✅ Application to Machine Code: Understand how RISC-V streamlines application execution at the machine level.  
-✅ RISC-V Verilog to GDS: Learn to convert RISC-V RTL into silicon-ready layouts using open-source EDA tools.  
-✅ Hands-on with VSD Squadron Board: Develop, test, and program real-world applications on the VSD Squadron Mini RISC-V development board.  
+✅ Application to Machine Code: Understand how RISC-V streamlines application execution at the machine level.   
+✅ RISC-V Verilog to GDS: Learn to convert RISC-V RTL into silicon-ready layouts using open-source EDA tools.    
+✅ Hands-on with VSD Squadron Board: Develop, test, and program real-world applications on the VSD Squadron Mini RISC-V board.    
 
 ## Expert Instructor
 <b>Kunal Ghosh </b> – Founder, VLSI System Design (VSD).  
@@ -1084,25 +1084,25 @@ This project implements a secure electronic combination lock system using the VS
 ✅ Low Power Consumption → Only consumes power when unlocking, making it energy efficient.  
 
 ### Why This Design?
-<b> 1. Secure and Reliable: </b> 
+#### <b> 1. Secure and Reliable: </b> 
 
-      Unlike simple push-button locks, this design ensures only the correct sequence unlocks the system.
-      Wrong input resets the sequence, making brute-force unlocking nearly impossible.  
+   - Unlike simple push-button locks, this design ensures only the correct sequence unlocks the system.
+   - Wrong input resets the sequence, making brute-force unlocking nearly impossible.  
       
-<b> 2.Cost-Effective & Minimal Components:
+#### <b> 2.Cost-Effective & Minimal Components:</b> 
 
-      Uses a TIP122 transistor instead of a relay module, reducing size and cost.
-      No need for external resistors as the VSDSQM board provides internal pull-ups.  
+   - Uses a TIP122 transistor instead of a relay module, reducing size and cost.
+   - No need for external resistors as the VSDSQM board provides internal pull-ups.  
       
-<b> 3.Efficient Power Management:
+#### <b> 3.Efficient Power Management:</b> 
 
-      Solenoid is activated only when unlocking, reducing unnecessary power usage.
-      Microcontroller operates at 3.3V, ensuring low energy consumption.   
+   - Solenoid is activated only when unlocking, reducing unnecessary power usage.
+   - Microcontroller operates at 3.3V, ensuring low energy consumption.   
       
-<b> 4. Easy to Customize & Expand:
+#### <b> 4. Easy to Customize & Expand:</b> 
 
-      Can be easily modified for 4 or more buttons for increased security.
-      Supports integration with RFID, keypads, or fingerprint sensors.
+   - Can be easily modified for 4 or more buttons for increased security.
+   - Supports integration with RFID, keypads, or fingerprint sensors.
 
 ### Future Improvements & Enhancements
  1. Add a Buzzer for Feedback → Audible feedback for correct and incorrect attempts.
