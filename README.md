@@ -823,7 +823,7 @@ GTKWave will launch and display the simulation results.
 <details>
    <summary><b> Task 5 : </b> Documentation of the project.</summary>
 
-   ## COMBINATION LOCK SYSTEM USING VSDSQM BOARD & SOLENOID LOCK
+   ## ELECTRONIC ACCESS CONTROL SYSTEM USING VSDSQM BOARD & SOLENOID LOCK
    #### This project implements a combination lock system using the VSDSQM board (CH32V003F4U6), three push buttons, a TIP122 transistor, and a 12V solenoid lock. The system unlocks only when the correct sequence of button presses is entered.
 
    ## Project Overview :
