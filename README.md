@@ -1116,3 +1116,13 @@ This project implements a secure electronic combination lock system using the VS
 This project provides a simple yet highly secure locking mechanism using a minimalist hardware approach. It is cost-effective, reliable, and expandable, making it a great starting point for advanced access control systems.
 
 </details>
+
+<hr>
+
+## Acknowledgment
+
+#### As a student of the Electronics and Communication Engineering Department at the Global Academy of Technology, I am sincerely grateful to Samsung Semiconductor India Research (SSIR) for supporting this workshop and providing an opportunity to gain hands-on experience in RISC-V-based SoC design.
+
+#### I extend my heartfelt thanks to VLSI System Design (VSD) and Kunal Ghosh for their expert guidance and for providing access to the VSD Squadron Mini board, which has been instrumental in my learning journey. I also appreciate the efforts of my ECE Department and the Tech Connect Club for organizing this initiative under the Digital India RISC-V Mission 2025.
+
+#### Lastly, I would like to acknowledge the dedication of all instructors, mentors, and fellow participants who have contributed to making this workshop a truly enriching experience.
